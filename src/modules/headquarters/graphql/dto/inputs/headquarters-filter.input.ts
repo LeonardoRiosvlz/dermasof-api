@@ -7,8 +7,11 @@ import { HeadquartersEntity } from '../../../entities/headquarters.entity';
 export class HeadquartersFilter implements IEntityFilter<HeadquartersEntity>{
   @FilterableField(()=>String, { nullable: true }) id?: string;
   @FilterableField(()=>String, { nullable: true }) name?: string;
-  @FilterableField(()=>String, { nullable: true}) description?: string;
-
+  @FilterableField(()=>String, { nullable: true}) code?: string;
+  @FilterableField(()=>String, { nullable: true}) city?: string;
+  @FilterableField(()=>String, { nullable: true}) email?: string;
+  @FilterableField(()=>String, { nullable: true}) phoneNumber?: string;
+  @FilterableField(()=>String, { nullable: true}) address?: string;
   @FilterableField(()=>Date ,{ nullable: true }) createdAt?: Date;
   @FilterableField(()=>Date ,{ nullable: true }) updatedAt?: Date;
 
