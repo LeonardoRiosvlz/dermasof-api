@@ -1,0 +1,5 @@
+{
+  "InformedConsentWithIdDoesNotExist": "InformedConsent con id: '%id%' no existe",
+  "InformedConsentNameUsed": "InformedConsent con nombre: '%name%' ya se encuentra registrada",
+  "InformedConsentFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

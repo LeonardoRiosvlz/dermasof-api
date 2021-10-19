@@ -1,0 +1,24 @@
+{
+  "NewsIsAlreadyUnavailable": "La Noticia '%code%' ya esta en estado no disponible",
+  "NewsIsAlreadyAvailable": "La Noticia '%code%' ya esta en estado disponible",
+  "NewsIsInactive": "La Noticia '%code%' esta inactiva",
+  "NewsByCodeDoesNotExist": "La Noticia '%code%' no existe",
+  "NewsByCodeAlreadyExist": "La Noticia '%code%' ya existe",
+  "UserWithEmailDoesNotExist": "User con correo '%email%' no existe",
+  "WrongPassword": "Contraseña incorrecta",
+  "UserWithIdDoesntExist": "No existe usuario con id '%id%'",
+  "UserDoesntExist": "No existe ningún usuario que cumpla los requerimientos",
+  "EmailExistError": "Ya existe un usuario con correo '%email%'",
+  "InvalidCredentials": "Credenciales incorrectas",
+  "FieldRequired": "El '%field%' es requerido",
+  "InvalidEmail": "Correo no válido",
+  "EmailUsed": "Existe un usuario registrado con este correo",
+  "EmailOrUserNameUsed": "Existe un usuario registrado con este correo o con este nombre de usuario",
+  "UserNotValidated": "Verifique su cuenta usando el enlace enviado a su correo electrónico",
+  "UserIsNotInstructor": "El usuario no tiene el rol de instructor",
+  "UserIsNotStudent": "El usuario no tiene el rol de estudiante",
+  "UserCannotBeRegistered": "El usuario no puede ser registrado. El correo o el nombre de usuario ya se encuentran en la base de datos",
+  "UserWithoutRoles": "El usuario: %identifier% no tiene ningún rol asignado",
+  "PasswordsDoNotMatch": "Las contraseñas no coinciden."
+
+}

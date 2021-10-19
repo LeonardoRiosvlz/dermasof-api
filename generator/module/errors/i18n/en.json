@@ -1,0 +1,5 @@
+{
+  "__name__WithIdDoesNotExist": "__name__ with id: '%id%' does not exists",
+  "__name__NameUsed": "__name__ with name: '%name%' already exists",
+  "__name__FieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

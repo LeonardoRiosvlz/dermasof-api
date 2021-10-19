@@ -1,0 +1,5 @@
+{
+  "ProceduresWithIdDoesNotExist": "Procedures with id: '%id%' does not exists",
+  "ProceduresNameUsed": "Procedures with name: '%name%' already exists",
+  "ProceduresFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

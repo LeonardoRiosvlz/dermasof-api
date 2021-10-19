@@ -1,0 +1,5 @@
+{
+  "SettingWithIdDoesNotExist": "Setting con id: '%id%' no existe",
+  "SettingNameUsed": "Setting con nombre: '%name%' ya se encuentra registrada",
+  "SettingFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

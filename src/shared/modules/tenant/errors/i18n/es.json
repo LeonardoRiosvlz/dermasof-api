@@ -1,0 +1,7 @@
+{
+  "TenantDoesNotExist": "El cliente (tenant) con identificador: '%code%' no existe",
+  "TenantNameUsed": "El cliente (tenant) con nombre: '%name%' ya se encuentra registrada",
+  "TenantCodeUsed": "El código de tenant: '%code%' se encuentra en uso",
+  "InvalidTenantCode": "El código de tenant: '%code%' es enválido. El codigo debe ser en minúsculas, sin caracteres especiales y sin espacio",
+  "NoTenantConnection": "En estos momentos el cliente (tenant): '%code%' no tiene una conexión activa"
+}

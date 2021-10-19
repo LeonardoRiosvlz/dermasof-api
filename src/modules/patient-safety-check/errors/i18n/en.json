@@ -1,0 +1,5 @@
+{
+  "PatientSafetyCheckWithIdDoesNotExist": "PatientSafetyCheck with id: '%id%' does not exists",
+  "PatientSafetyCheckNameUsed": "PatientSafetyCheck with name: '%name%' already exists",
+  "PatientSafetyCheckFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

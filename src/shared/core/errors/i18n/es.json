@@ -1,0 +1,7 @@
+{
+  "UnexpectedError": "Ha ocurrido un error inesperado. %error%",
+  "TransactionalError": "Ha ocurrido un error transaccional",
+  "ValidationError": "Ha ocurrido un error de Validación. %message%",
+  "EntityDoesNotExistError": "La entidad: %entity%, con id: %id% no existe en la base de datos",
+  "EntityConditionDoesNotShowResults": "La condición de la entidad %entity%, no muestra ningún resultado"
+}

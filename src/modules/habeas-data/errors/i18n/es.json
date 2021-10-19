@@ -1,0 +1,5 @@
+{
+  "HabeasDataWithIdDoesNotExist": "HabeasData con id: '%id%' no existe",
+  "HabeasDataNameUsed": "HabeasData con nombre: '%name%' ya se encuentra registrada",
+  "HabeasDataFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

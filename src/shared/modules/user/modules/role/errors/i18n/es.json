@@ -1,0 +1,5 @@
+{
+  "RoleWithIdDoesNotExist": "Role con id: '%id%' no existe",
+  "RoleNameUsed": "Role con nombre: '%name%' ya se encuentra registrada",
+  "RoleFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

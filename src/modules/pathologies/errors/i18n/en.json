@@ -1,0 +1,5 @@
+{
+  "PathologiesWithIdDoesNotExist": "Pathologies with id: '%id%' does not exists",
+  "PathologiesNameUsed": "Pathologies with name: '%name%' already exists",
+  "PathologiesFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

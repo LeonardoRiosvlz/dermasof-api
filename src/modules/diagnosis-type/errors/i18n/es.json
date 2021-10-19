@@ -1,0 +1,5 @@
+{
+  "DiagnosisTypeWithIdDoesNotExist": "DiagnosisType con id: '%id%' no existe",
+  "DiagnosisTypeNameUsed": "DiagnosisType con nombre: '%name%' ya se encuentra registrada",
+  "DiagnosisTypeFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

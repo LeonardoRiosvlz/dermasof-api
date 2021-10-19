@@ -1,0 +1,5 @@
+{
+  "OfficeWithIdDoesNotExist": "Office with id: '%id%' does not exists",
+  "OfficeNameUsed": "Office with name: '%name%' already exists",
+  "OfficeFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

@@ -1,0 +1,8 @@
+{
+  "TenantDoesNotExist": "Tenant with identifier: '%code%' does not exists",
+  "TenantNameUsed": "Tenant with name: '%name%' already exists",
+  "TenantCodeUsed": "Tenant code: '%code%' is in use",
+  "InvalidTenantCode": "Tenant code: '%code%' is invalid. The code must be in lowercase, without special characters spaces",
+  "NoTenantConnection": "At the moment the client (tenant): '%code%' does not have an active connection"
+
+}

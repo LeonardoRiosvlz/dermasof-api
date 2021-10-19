@@ -1,0 +1,8 @@
+{
+
+  "WrongPassword": "Wrong user password",
+  "InvalidCredentials": "Invalid credentials",
+  "UserNotValidated": "Please verify your account using the link sent to your email",
+  "UserIsNotActive": "The User: %identifier%, is not active.",
+  "UserHasNotPermits": "The user: %identifier% , not have the permissions to access the resource."
+}

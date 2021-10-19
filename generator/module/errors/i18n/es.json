@@ -1,0 +1,5 @@
+{
+  "__name__WithIdDoesNotExist": "__name__ con id: '%id%' no existe",
+  "__name__NameUsed": "__name__ con nombre: '%name%' ya se encuentra registrada",
+  "__name__FieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

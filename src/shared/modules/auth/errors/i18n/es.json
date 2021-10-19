@@ -1,0 +1,8 @@
+{
+
+  "WrongPassword": "Contraseña incorrecta",
+  "InvalidCredentials": "Credenciales incorrectas",
+  "UserNotValidated": "Verifique su cuenta usando el enlace enviado a su correo electrónico",
+  "UserIsNotActive": "El usuario: %identifier% No esta activo.",
+  "UserHasNotPermits": "El usuario: %identifier% no tiene los permisos para acceder al recurso.",
+}

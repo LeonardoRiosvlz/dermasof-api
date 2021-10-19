@@ -1,0 +1,5 @@
+{
+  "OfficeWithIdDoesNotExist": "Office con id: '%id%' no existe",
+  "OfficeNameUsed": "Office con nombre: '%name%' ya se encuentra registrada",
+  "OfficeFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

@@ -1,0 +1,5 @@
+{
+  "RoleWithIdDoesNotExist": "Role with id: '%id%' does not exists",
+  "RoleNameUsed": "Role with name: '%name%' already exists",
+  "RoleFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

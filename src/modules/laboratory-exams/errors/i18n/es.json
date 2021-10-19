@@ -1,0 +1,5 @@
+{
+  "LaboratoryExamsWithIdDoesNotExist": "LaboratoryExams con id: '%id%' no existe",
+  "LaboratoryExamsNameUsed": "LaboratoryExams con nombre: '%name%' ya se encuentra registrada",
+  "LaboratoryExamsFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

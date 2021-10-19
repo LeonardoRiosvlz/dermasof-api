@@ -1,0 +1,5 @@
+{
+  "NotificationWithIdDoesNotExist": "Notification with id: '%id%' does not exists",
+  "NotificationNameUsed": "Notification with name: '%name%' already exists",
+  "NotificationFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

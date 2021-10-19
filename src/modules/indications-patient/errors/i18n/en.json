@@ -1,0 +1,5 @@
+{
+  "IndicationsPatientWithIdDoesNotExist": "IndicationsPatient with id: '%id%' does not exists",
+  "IndicationsPatientNameUsed": "IndicationsPatient with name: '%name%' already exists",
+  "IndicationsPatientFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

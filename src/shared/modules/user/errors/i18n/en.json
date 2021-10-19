@@ -1,0 +1,23 @@
+{
+  "NewsIsAlreadyUnavailable": "News '%code%' is already in the unavailable state",
+  "NewsIsAlreadyAvailable": "News '%code%' is already in the available state",
+  "NewsIsInactive": "News '%code%' is inactive",
+  "NewsByCodeDoesNotExist": "News '%code%' does not exist",
+  "NewsByCodeAlreadyExist": "News '%code%' already exist",
+  "UserWithEmailDoesNotExist": "Doesn't exist user with email '%email%'",
+  "WrongPassword": "Wrong user password",
+  "UserDoesntExist": "Doesn't exist any user with this requirements",
+  "UserWithIdDoesntExist": "Doesn't exist user with id '%id%'",
+  "EmailExistError": "User with email '%email%' already exist",
+  "InvalidCredentials": "Invalid credentials",
+  "FieldRequired": "The field '%field%' is required",
+  "InvalidEmail": "Invalid Email",
+  "EmailUsed": "This email is already being used",
+  "EmailOrUserNameUsed": "This email or username is already being used",
+  "UserNotValidated": "Please verify your account using the link sent to your email",
+  "UserIsNotInstructor": "The User is not Instructor",
+  "UserIsNotStudent": "The User is not Student",
+  "UserCannotBeRegistered": "The user cannot be registered. The email or username is already in the database",
+  "UserWithoutRoles": "The User: %identifier% does not have any role assigned",
+  "PasswordsDoNotMatch": "Passwords do not match"
+}

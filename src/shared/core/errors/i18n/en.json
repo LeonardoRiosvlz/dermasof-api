@@ -1,0 +1,9 @@
+{
+  "UnexpectedError": "An unexpected error occurred. %error%",
+  "TransactionalError": "A transactional error has ocurred",
+  "ValidationError": "An Validation error occurred. %message%",
+  "EntityDoesNotExistError": "Entity: %entity%, width id: %id% does not exists in data base",
+  "EntityConditionDoesNotShowResults": "Entity condition for: %entity% does not show results"
+
+
+}

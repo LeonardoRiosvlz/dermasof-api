@@ -1,0 +1,5 @@
+{
+  "LaboratoryExamsWithIdDoesNotExist": "LaboratoryExams with id: '%id%' does not exists",
+  "LaboratoryExamsNameUsed": "LaboratoryExams with name: '%name%' already exists",
+  "LaboratoryExamsFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

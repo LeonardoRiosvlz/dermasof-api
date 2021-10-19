@@ -1,0 +1,5 @@
+{
+  "UserAreaWithIdDoesNotExist": "UserArea con id: '%id%' no existe",
+  "UserAreaNameUsed": "UserArea con nombre: '%name%' ya se encuentra registrada",
+  "UserAreaFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

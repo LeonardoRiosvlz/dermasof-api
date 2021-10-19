@@ -1,0 +1,5 @@
+{
+  "UserPositionWithIdDoesNotExist": "UserPosition with id: '%id%' does not exists",
+  "UserPositionNameUsed": "UserPosition with name: '%name%' already exists",
+  "UserPositionFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

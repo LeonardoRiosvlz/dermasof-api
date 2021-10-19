@@ -1,0 +1,5 @@
+{
+  "FloorWithIdDoesNotExist": "Floor with id: '%id%' does not exists",
+  "FloorNameUsed": "Floor with name: '%name%' already exists",
+  "FloorFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

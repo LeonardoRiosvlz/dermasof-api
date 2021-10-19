@@ -1,0 +1,5 @@
+{
+  "DataParameterizationWithIdDoesNotExist": "DataParameterization with id: '%id%' does not exists",
+  "DataParameterizationNameUsed": "DataParameterization with name: '%name%' already exists",
+  "DataParameterizationFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

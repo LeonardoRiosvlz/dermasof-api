@@ -1,0 +1,5 @@
+{
+  "MembershipWithIdDoesNotExist": "Membership con id: '%id%' no existe",
+  "MembershipNameUsed": "Membership con nombre: '%name%' ya se encuentra registrada",
+  "MembershipFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

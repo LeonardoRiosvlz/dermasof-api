@@ -1,0 +1,5 @@
+{
+  "NotificationWithIdDoesNotExist": "Notification con id: '%id%' no existe",
+  "NotificationNameUsed": "Notification con nombre: '%name%' ya se encuentra registrada",
+  "NotificationFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

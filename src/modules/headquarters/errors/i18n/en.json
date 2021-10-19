@@ -1,0 +1,5 @@
+{
+  "HeadquartersWithIdDoesNotExist": "Headquarters with id: '%id%' does not exists",
+  "HeadquartersNameUsed": "Headquarters with name: '%name%' already exists",
+  "HeadquartersFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}
