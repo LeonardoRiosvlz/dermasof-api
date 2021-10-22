@@ -1,0 +1,5 @@
+{
+  "ServiceCategoryWithIdDoesNotExist": "ServiceCategory con id: '%id%' no existe",
+  "ServiceCategoryNameUsed": "ServiceCategory con nombre: '%name%' ya se encuentra registrada",
+  "ServiceCategoryFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

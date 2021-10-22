@@ -1,0 +1,5 @@
+{
+  "ServiceWithIdDoesNotExist": "Service con id: '%id%' no existe",
+  "ServiceNameUsed": "Service con nombre: '%name%' ya se encuentra registrada",
+  "ServiceFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

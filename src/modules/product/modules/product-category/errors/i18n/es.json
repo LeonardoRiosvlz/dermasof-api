@@ -1,0 +1,5 @@
+{
+  "ProductCategoryWithIdDoesNotExist": "ProductCategory con id: '%id%' no existe",
+  "ProductCategoryNameUsed": "ProductCategory con nombre: '%name%' ya se encuentra registrada",
+  "ProductCategoryFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

@@ -1,0 +1,5 @@
+{
+  "ProductWithIdDoesNotExist": "Product con id: '%id%' no existe",
+  "ProductNameUsed": "Product con nombre: '%name%' ya se encuentra registrada",
+  "ProductFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

@@ -24,6 +24,8 @@ import { PatientSafetyCheckModule } from './modules/patient-safety-check/patient
 import { LaboratoryExamsModule } from './modules/laboratory-exams/laboratory-exams.module';
 import { MedicinesModule } from './modules/medicines/medicines.module';
 import { PathologiesModule } from './modules/pathologies/pathologies.module';
+import { ServiceModule } from './modules/service/service.module';
+import { ProductModule } from './modules/product/product.module';
 
 @Module({
   imports: [
@@ -51,6 +53,8 @@ import { PathologiesModule } from './modules/pathologies/pathologies.module';
     LaboratoryExamsModule,
     MedicinesModule,
     PathologiesModule,
+    ServiceModule,
+    ProductModule,
     FixturesModule,
   ],
 
