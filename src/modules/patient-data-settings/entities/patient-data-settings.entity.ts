@@ -4,7 +4,7 @@ import { SchemaConstants } from 'src/shared/modules/data-access/mongoose/schema.
 
 @Schema({ ...SchemaConstants, collection: 'patient-data-settings' })
 export class PatientDataSettingsEntity extends PersistentEntity {
-   @Prop() firstName?: boolean;
+	 @Prop() firstName?: boolean;
 	 @Prop() lastName?: boolean;
 	 @Prop() firstSurname?: boolean;
 	 @Prop() lastSurname?: boolean;

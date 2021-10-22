@@ -2,7 +2,7 @@ import { PersistentEntity } from 'src/shared/modules/data-access/mongoose/base.e
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { SchemaConstants } from 'src/shared/modules/data-access/mongoose/schema.constants';
 
-export enum Periods{
+export enum PeriodsType{
   MONTHLY='MONTHLY',
   BIMONTHLY='BIMONTHLY',
   QUARTERLY='QUARTERLY',
@@ -12,8 +12,9 @@ export enum Periods{
 
 @Schema({ ...SchemaConstants, collection: 'membership' })
 export class MembershipEntity extends PersistentEntity {
+  @Prop() name: string; 
   @Prop() cost?: number; 
-  @Prop({type:String}) validity?: Periods;
+  @Prop({type:String}) validity?: PeriodsType;
   @Prop() daysAfterExpired?: number; 
   @Prop() voiceTranscription?: boolean;
   @Prop() limitedNumberPatients?: boolean;
@@ -27,9 +28,9 @@ export class MembershipEntity extends PersistentEntity {
   @Prop() sendingWhatsappMedicalPrescription?: boolean;
   @Prop() generateConsentDigitally?: boolean;
   @Prop() schedulingAppointmentsWeb?: boolean;
-  @Prop() appointmentWotificationWhatsApp?: boolean;
-  @Prop() appointmentWotificationMail?: boolean;
-  @Prop() appointmentWotificationSms?: boolean;
+  @Prop() appointmentNotificationWhatsApp?: boolean;
+  @Prop() appointmentNotificationMail?: boolean;
+  @Prop() appointmentNotificationSms?: boolean;
   @Prop() appointmentReminderWhatsApp?: boolean;
   @Prop() appointmentReminderMail?: boolean;
   @Prop() appointmentReminderSms?: boolean;

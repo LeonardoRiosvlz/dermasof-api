@@ -6,7 +6,7 @@ import { ProceduresEntity } from '../../../entities/procedures.entity';
 @ObjectType()
 export class ProceduresFilter implements IEntityFilter<ProceduresEntity>{
   @FilterableField(()=>String, { nullable: true }) id?: string;
-  @FilterableField(()=>String, { nullable: true }) name?: string;
+  @FilterableField(()=>String, { nullable: true }) code?: string;
   @FilterableField(()=>String, { nullable: true}) description?: string;
 
   @FilterableField(()=>Date ,{ nullable: true }) createdAt?: Date;
