@@ -1,4 +1,4 @@
-import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { Args, Mutation, Query, Resolver, ResolveField, Parent } from '@nestjs/graphql';
 
 
 import { GraphQLVoid } from 'graphql-scalars';
@@ -32,6 +32,10 @@ import { APP_MODULES } from 'src/shared/resources/modules.enum';
 import { ACTION_LIST } from 'src/shared/resources/permits.type';
 import { ProductEntity } from '../../entities/product.entity';
 import { IPaginatedData } from 'src/shared/core/interfaces/IPaginatedData';
+
+import { SolvedEntityResponse } from 'src/shared/modules/graphql/dto/responses/solved-entity.response';
+import { ProductCategoryEntity } from '../../modules/product-category/entities/product-category.entity';
+import { GetOneProductCategoryQuery } from '../../modules/product-category/cqrs/queries/impl/get-one-product-category.query';
 
 
 @Resolver(() => ProductResponse)
@@ -130,6 +134,27 @@ export class ProductResolver extends BaseResolver {
       currentPage, limit, totalPages, total,
       items: items.map(this._productMapper.persistent2Dto),
     };
+  }
+
+
+
+  @ResolveField(() => [SolvedEntityResponse], { nullable: true })
+  async category(@Parent() parent?: ProductResponse): Promise<SolvedEntityResponse> {
+    if (parent?.category) {
+      const compositionOrErr = await this._cqrsBus.execQuery<Result<ProductCategoryEntity>>(new GetOneProductCategoryQuery({where:{
+          id: {eq: parent.category.id}
+        }}));
+      if (compositionOrErr.isFailure) {
+        return null;
+      }
+      const category = compositionOrErr.unwrap();
+      return {
+        id: category.id,
+        entityName: ProductCategoryEntity.name,
+        identifier: category.name
+      }
+
+    }
   }
 
 

@@ -27,6 +27,7 @@ export class ProductMapper implements BaseMapper<ProductEntity> {
   persistent2Dto(persistentEntity: ProductEntity): ProductResponse {
     return {
       ...persistentEntity,
+      category: persistentEntity?.category ? { id: persistentEntity.category } : undefined,
     };
   }
 

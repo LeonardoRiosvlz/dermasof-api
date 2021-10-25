@@ -1,0 +1,5 @@
+{
+  "ConsultationTypeWithIdDoesNotExist": "ConsultationType with id: '%id%' does not exists",
+  "ConsultationTypeNameUsed": "ConsultationType with name: '%name%' already exists",
+  "ConsultationTypeFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

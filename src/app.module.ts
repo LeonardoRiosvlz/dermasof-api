@@ -26,6 +26,9 @@ import { MedicinesModule } from './modules/medicines/medicines.module';
 import { PathologiesModule } from './modules/pathologies/pathologies.module';
 import { ServiceModule } from './modules/service/service.module';
 import { ProductModule } from './modules/product/product.module';
+import { PatientsModule } from './modules/patients/patients.module';
+import { ConsultationTypeModule } from './modules/consultation-type/consultation-type.module';
+import { VitalSignsModule } from './modules/vital-signs/vital-signs.module';
 
 @Module({
   imports: [
@@ -56,6 +59,9 @@ import { ProductModule } from './modules/product/product.module';
     ServiceModule,
     ProductModule,
     FixturesModule,
+    PatientsModule,
+    ConsultationTypeModule,
+    VitalSignsModule,
   ],
 
   controllers: [],
