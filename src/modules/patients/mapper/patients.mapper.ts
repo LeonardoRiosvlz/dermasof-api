@@ -27,6 +27,10 @@ export class PatientsMapper implements BaseMapper<PatientsEntity> {
   persistent2Dto(persistentEntity: PatientsEntity): PatientsResponse {
     return {
       ...persistentEntity,
+      signature: persistentEntity?.signature ? { id: persistentEntity.signature } : undefined,
+      photoFile: persistentEntity?.photoFile ? { id: persistentEntity.photoFile } : undefined,
+      headquarters: persistentEntity?.headquarters ? { id: persistentEntity.headquarters } : undefined,
+      habeasData: persistentEntity?.habeasData ? { id: persistentEntity.habeasData } : undefined,
     };
   }
 

@@ -1,4 +1,4 @@
-import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { Args, Mutation, Query, Resolver, Parent, ResolveField } from '@nestjs/graphql';
 
 
 import { GraphQLVoid } from 'graphql-scalars';
@@ -33,6 +33,10 @@ import { ACTION_LIST } from 'src/shared/resources/permits.type';
 import { ConsultationTypeEntity } from '../../entities/consultation-type.entity';
 import { IPaginatedData } from 'src/shared/core/interfaces/IPaginatedData';
 
+
+import { SolvedEntityResponse } from 'src/shared/modules/graphql/dto/responses/solved-entity.response';
+import { ServiceEntity } from 'src/modules/service/entities/service.entity';
+import { GetOneServiceQuery } from 'src/modules/service/cqrs/queries/impl/get-one-service.query';
 
 @Resolver(() => ConsultationTypeResponse)
 export class ConsultationTypeResolver extends BaseResolver {
@@ -131,6 +135,29 @@ export class ConsultationTypeResolver extends BaseResolver {
       items: items.map(this._consultationTypeMapper.persistent2Dto),
     };
   }
+
+
+
+
+  @ResolveField(() => [SolvedEntityResponse], { nullable: true })
+  async service(@Parent() parent?: ConsultationTypeResponse): Promise<SolvedEntityResponse> {
+    if (parent?.service) {
+      const serviceOrErr = await this._cqrsBus.execQuery<Result<ServiceEntity>>(new GetOneServiceQuery({where:{
+          id: {eq: parent.service.id}
+        }}));
+      if (serviceOrErr.isFailure) {
+        return null;
+      }
+      const service = serviceOrErr.unwrap();
+      return {
+        id: service.id,
+        entityName: ServiceEntity.name,
+        identifier: service.name
+      }
+
+    }
+  }
+
 
 
 }

@@ -1,4 +1,4 @@
-import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { Args, Mutation, Query, Resolver, Parent,ResolveField } from '@nestjs/graphql';
 
 
 import { GraphQLVoid } from 'graphql-scalars';
@@ -33,6 +33,15 @@ import { ACTION_LIST } from 'src/shared/resources/permits.type';
 import { PatientsEntity } from '../../entities/patients.entity';
 import { IPaginatedData } from 'src/shared/core/interfaces/IPaginatedData';
 
+
+import { SolvedEntityResponse } from 'src/shared/modules/graphql/dto/responses/solved-entity.response';
+import { CloudFileResponse } from 'src/shared/modules/graphql/dto/responses/cloud-file.response';
+import { FilesEntity } from 'src/shared/modules/files/entities/files.entity';
+import { GetOneFilesQuery } from 'src/shared/modules/files/cqrs/queries/impl/get-one-files.query';
+import { HeadquartersEntity } from 'src/modules/headquarters/entities/headquarters.entity';
+import { GetOneHeadquartersQuery } from 'src/modules/headquarters/cqrs/queries/impl/get-one-headquarters.query';
+import { HabeasDataEntity } from 'src/modules/habeas-data/entities/habeas-data.entity';
+import { GetOneHabeasDataQuery } from 'src/modules/habeas-data/cqrs/queries/impl/get-one-habeas-data.query';
 
 @Resolver(() => PatientsResponse)
 export class PatientsResolver extends BaseResolver {
@@ -131,6 +140,88 @@ export class PatientsResolver extends BaseResolver {
       items: items.map(this._patientsMapper.persistent2Dto),
     };
   }
+
+
+
+  @ResolveField(() => CloudFileResponse, { nullable: true })
+  async photoFile(@Parent() parent?: PatientsResponse): Promise<CloudFileResponse> {
+    if (parent?.photoFile) {
+      const fileOrErr = await this._cqrsBus.execQuery<Result<FilesEntity>>(new GetOneFilesQuery({
+        where: {
+          id: { eq: parent.photoFile.id },
+        },
+      }));
+      if (fileOrErr.isFailure) {
+        return null;
+      }
+      const file = fileOrErr.unwrap();
+      return {
+        id: file.id,
+        key: file.key,
+        url: file.url,
+      };
+    }
+  }
+
+  @ResolveField(() => CloudFileResponse, { nullable: true })
+  async signature(@Parent() parent?: PatientsResponse): Promise<CloudFileResponse> {
+    if (parent?.photoFile) {
+      const signatureOrErr = await this._cqrsBus.execQuery<Result<FilesEntity>>(new GetOneFilesQuery({
+        where: {
+          id: { eq: parent.signature.id },
+        },
+      }));
+      if (signatureOrErr.isFailure) {
+        return null;
+      }
+      const signature = signatureOrErr.unwrap();
+      return {
+        id: signature.id,
+        key: signature.key,
+        url: signature.url,
+      };
+    }
+  }
+
+  @ResolveField(() => [SolvedEntityResponse], { nullable: true })
+  async headquarters(@Parent() parent?: PatientsResponse): Promise<SolvedEntityResponse> {
+    if (parent?.headquarters) {
+      const headquartersOrErr = await this._cqrsBus.execQuery<Result<HeadquartersEntity>>(new GetOneHeadquartersQuery({where:{
+          id: {eq: parent.headquarters.id}
+        }}));
+      if (headquartersOrErr.isFailure) {
+        return null;
+      }
+      const headquarters = headquartersOrErr.unwrap();
+      return {
+        id: headquarters.id,
+        entityName: HeadquartersEntity.name,
+        identifier: headquarters.name
+      }
+
+    }
+  }
+
+
+  @ResolveField(() => [SolvedEntityResponse], { nullable: true })
+  async habeasData(@Parent() parent?: PatientsResponse): Promise<SolvedEntityResponse> {
+    if (parent?.habeasData) {
+      const habeasDataOrErr = await this._cqrsBus.execQuery<Result<HabeasDataEntity>>(new GetOneHabeasDataQuery({where:{
+          id: {eq: parent.habeasData.id}
+        }}));
+      if (habeasDataOrErr.isFailure) {
+        return null;
+      }
+      const habeasData = habeasDataOrErr.unwrap();
+      return {
+        id: habeasData.id,
+        entityName: HeadquartersEntity.name,
+        identifier: habeasData.description
+      }
+
+    }
+  }
+
 
 
 }

@@ -27,6 +27,7 @@ export class ConsultationTypeMapper implements BaseMapper<ConsultationTypeEntity
   persistent2Dto(persistentEntity: ConsultationTypeEntity): ConsultationTypeResponse {
     return {
       ...persistentEntity,
+      service: persistentEntity?.service ? { id: persistentEntity.service } : undefined,
     };
   }
 
