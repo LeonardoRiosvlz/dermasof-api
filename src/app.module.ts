@@ -29,6 +29,7 @@ import { ProductModule } from './modules/product/product.module';
 import { PatientsModule } from './modules/patients/patients.module';
 import { ConsultationTypeModule } from './modules/consultation-type/consultation-type.module';
 import { VitalSignsModule } from './modules/vital-signs/vital-signs.module';
+import { ClinicHistoryModule } from './modules/clinic-history/clinic-history.module';
 
 @Module({
   imports: [
@@ -62,6 +63,7 @@ import { VitalSignsModule } from './modules/vital-signs/vital-signs.module';
     PatientsModule,
     ConsultationTypeModule,
     VitalSignsModule,
+    ClinicHistoryModule,
   ],
 
   controllers: [],

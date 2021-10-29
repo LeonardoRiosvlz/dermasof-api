@@ -1,0 +1,5 @@
+{
+  "ClinicHistoryWithIdDoesNotExist": "ClinicHistory with id: '%id%' does not exists",
+  "ClinicHistoryNameUsed": "ClinicHistory with name: '%name%' already exists",
+  "ClinicHistoryFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}
