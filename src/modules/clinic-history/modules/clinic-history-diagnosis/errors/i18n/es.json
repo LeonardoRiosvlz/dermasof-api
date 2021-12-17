@@ -1,0 +1,5 @@
+{
+  "ClinicHistoryDiagnosisWithIdDoesNotExist": "ClinicHistoryDiagnosis con id: '%id%' no existe",
+  "ClinicHistoryDiagnosisNameUsed": "ClinicHistoryDiagnosis con nombre: '%name%' ya se encuentra registrada",
+  "ClinicHistoryDiagnosisFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

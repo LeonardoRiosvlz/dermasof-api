@@ -1,0 +1,5 @@
+{
+  "FilesPhotographicReportWithIdDoesNotExist": "FilesPhotographicReport con id: '%id%' no existe",
+  "FilesPhotographicReportNameUsed": "FilesPhotographicReport con nombre: '%name%' ya se encuentra registrada",
+  "FilesPhotographicReportFieldUsed": "Existe en la base de datos el valor: '%value%' para el campo %field%"
+}

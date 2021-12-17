@@ -13,6 +13,9 @@ import { TenantModule } from 'src/shared/modules/tenant/tenant.module';
 import { TenantUtils } from 'src/shared/modules/tenant/utils/tenant.utils';
 import { AppCqrsModule } from 'src/shared/modules/app-cqrs/app-cqrs.module';
 import { ClinicHistoryEntityService } from './services/clinic-history-entity.service';
+import { ClinicHistoryDiagnosisModule } from './modules/clinic-history-diagnosis/clinic-history-diagnosis.module';
+import { ClinicalHistoryIndicationsModule } from './modules/clinical-history-indications/clinical-history-indications.module';
+import { ClinicHistoryProcedureModule } from './modules/clinic-history-procedure/clinic-history-procedure.module';
 
 @Module({
   imports: [
@@ -20,6 +23,9 @@ import { ClinicHistoryEntityService } from './services/clinic-history-entity.ser
     AppConfigModule,
     DataAccessModule,
     TenantModule,
+    ClinicHistoryDiagnosisModule,
+    ClinicalHistoryIndicationsModule,
+    ClinicHistoryProcedureModule,
     AppCqrsModule,
   ],
   providers: [

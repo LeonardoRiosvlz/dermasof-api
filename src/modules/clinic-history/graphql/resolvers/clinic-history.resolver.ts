@@ -144,47 +144,6 @@ export class ClinicHistoryResolver extends BaseResolver {
 
 
 
-  @ResolveField(() => [SolvedEntityResponse], { nullable: true })
-  async diagnosis(@Parent() parent?: ClinicHistoryResponse): Promise<Array<SolvedEntityResponse>> {
-    if (parent?.diagnosis) {
-      const diagnosisOrErr = await this._cqrsBus.execQuery<Result<Array<DiagnosisEntity>>>(new GetAllDiagnosisQuery({where:{
-          id: {in: parent.diagnosis.map(x=>x.id)}
-        }}));
-      if (diagnosisOrErr.isFailure) {
-        return [];
-      }
-      const diagnosis: Array<DiagnosisEntity> = diagnosisOrErr.unwrap();
-      return diagnosis.map((x)=>{
-        return {
-          id: x.id,
-          entityName: GetAllDiagnosisQuery.name,
-          identifier: x.code
-        }
-      })
-    }
-  }
-
-  @ResolveField(() => [SolvedEntityResponse], { nullable: true })
-  async indications(@Parent() parent?: ClinicHistoryResponse): Promise<Array<SolvedEntityResponse>> {
-    if (parent?.indications) {
-      const indicationsOrErr = await this._cqrsBus.execQuery<Result<Array<IndicationsPatientEntity>>>(new GetAllIndicationsPatientQuery({where:{
-          id: {in: parent.indications.map(x=>x.id)}
-        }}));
-      if (indicationsOrErr.isFailure) {
-        return [];
-      }
-      const indications: Array<IndicationsPatientEntity> = indicationsOrErr.unwrap();
-      return indications.map((x)=>{
-        return {
-          id: x.id,
-          entityName: GetAllDiagnosisQuery.name,
-          identifier: x.description
-        }
-      })
-    }
-  }
-
-
 
 
   @ResolveField(() => [SolvedEntityResponse], { nullable: true })

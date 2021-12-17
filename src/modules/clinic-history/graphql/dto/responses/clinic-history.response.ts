@@ -1,9 +1,10 @@
 import { Field, ID,  ObjectType , registerEnumType} from '@nestjs/graphql';
-import { ExternalCause, PurposeType } from 'src/modules/clinic-history/entities/clinic-history.entity';
+import { ClinicHistoryType, ExternalCause, PurposeType } from 'src/modules/clinic-history/entities/clinic-history.entity';
+
 import { SolvedEntityResponse } from 'src/shared/modules/graphql/dto/responses/solved-entity.response';
 registerEnumType(ExternalCause, { name: 'ExternalCause' });
 registerEnumType(PurposeType, { name: 'PurposeType' });
-
+registerEnumType(ClinicHistoryType, { name: 'ClinicHistoryType' });
 
 @ObjectType()
 export class ClinicHistoryResponse{
@@ -11,6 +12,7 @@ export class ClinicHistoryResponse{
   @Field(() => SolvedEntityResponse, { nullable: true }) patient: SolvedEntityResponse;
   @Field(() => ExternalCause, )  externalCause: ExternalCause;
   @Field(() => PurposeType, )  purposeType: PurposeType;
+  @Field(() => ClinicHistoryType, )  clinicHistoryType: ClinicHistoryType;
   @Field() otherHistory: string;
   @Field() familyHistory: string;
   @Field() pharmacologicalHistory: string;
@@ -25,8 +27,6 @@ export class ClinicHistoryResponse{
   @Field({nullable: true}) observations?: string;
   @Field(()=>Boolean ) sendDirectionsToWhatsapp: boolean;
   @Field(()=>Boolean ) sendDirectionsTheMail: boolean;
-  @Field(() => [SolvedEntityResponse]) diagnosis?: Array<SolvedEntityResponse>;
-  @Field(() => [SolvedEntityResponse]) indications?: Array<SolvedEntityResponse>;
   @Field({nullable: true}) createdAt?: Date;
   @Field({nullable: true}) updatedAt?: Date;
 }

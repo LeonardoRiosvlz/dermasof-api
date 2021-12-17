@@ -28,6 +28,11 @@ export class ConsultationTypeMapper implements BaseMapper<ConsultationTypeEntity
     return {
       ...persistentEntity,
       service: persistentEntity?.service ? { id: persistentEntity.service } : undefined,
+      doctors: Array.from(persistentEntity.doctors ?? []).map((x)=>{
+        return{
+          id: x
+        }
+      }),
     };
   }
 

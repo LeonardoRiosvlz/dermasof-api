@@ -165,7 +165,7 @@ export class PatientsResolver extends BaseResolver {
 
   @ResolveField(() => CloudFileResponse, { nullable: true })
   async signature(@Parent() parent?: PatientsResponse): Promise<CloudFileResponse> {
-    if (parent?.photoFile) {
+    if (parent?.signature) {
       const signatureOrErr = await this._cqrsBus.execQuery<Result<FilesEntity>>(new GetOneFilesQuery({
         where: {
           id: { eq: parent.signature.id },

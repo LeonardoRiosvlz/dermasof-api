@@ -1,0 +1,5 @@
+{
+  "RegionWithIdDoesNotExist": "Region with id: '%id%' does not exists",
+  "RegionNameUsed": "Region with name: '%name%' already exists",
+  "RegionFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

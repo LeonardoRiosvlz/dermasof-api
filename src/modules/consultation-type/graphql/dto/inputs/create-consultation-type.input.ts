@@ -6,4 +6,5 @@ export class CreateConsultationTypeInput {
   @Field(() => Int, )  duration: number;
   @Field(() => ID, { nullable: true }) service: string;
   @Field(() => String, {nullable: true} )  description?: string;
+  @Field(() => [ID]) doctors?: Array<string>;
 }

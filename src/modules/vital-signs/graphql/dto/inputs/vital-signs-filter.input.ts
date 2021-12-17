@@ -7,6 +7,7 @@ import { VitalSignsEntity } from '../../../entities/vital-signs.entity';
 export class VitalSignsFilter implements IEntityFilter<VitalSignsEntity>{
   @FilterableField(()=>String, { nullable: true }) id?: string;
   @FilterableField(()=>String, { nullable: true }) heartRate?: string;
+  @FilterableField(()=>String, { nullable: true }) patient?: string;
   @FilterableField(()=>String, { nullable: true}) breathingFrequency?: string;
   @FilterableField(()=>String, { nullable: true }) weight?: string;
   @FilterableField(()=>String, { nullable: true}) bloodPressure?: string;

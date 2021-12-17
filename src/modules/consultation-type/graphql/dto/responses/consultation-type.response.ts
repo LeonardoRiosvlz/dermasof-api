@@ -8,6 +8,7 @@ export class ConsultationTypeResponse{
   @Field(()=> Int) duration: number;
   @Field({nullable: true}) description?: string;
   @Field(() => SolvedEntityResponse, { nullable: true }) service: SolvedEntityResponse;
+  @Field(() => [SolvedEntityResponse]) doctors?: Array<SolvedEntityResponse>;
   @Field({nullable: true}) createdAt?: Date;
   @Field({nullable: true}) updatedAt?: Date;
 }

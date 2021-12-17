@@ -4,6 +4,16 @@ import { SchemaConstants } from 'src/shared/modules/data-access/mongoose/schema.
 import { PatientsEntity } from 'src/modules/patients//entities/patients.entity';
 import { Schema as MSchema } from 'mongoose';
 
+export enum ClinicHistoryType {
+  ENTRY='ENTRY',
+  CONTROL='CONTROL',
+  BIOPSY_OR_PROCEDURE='BIOPSY_OR_PROCEDURE',
+  CRYOTHERAPY='CRYOTHERAPY',
+  AESTHETIC_PROCEDURES='AESTHETIC_PROCEDURES',
+  SURGICAL_DESCRIPTION='SURGICAL_DESCRIPTION'
+
+}
+
 export enum ExternalCause{
   GENERAL_ILLNESS='GENERAL_ILLNESS',
   PROFESSIONAL_ILLNESS='PROFESSIONAL_ILLNESS',
@@ -42,11 +52,12 @@ export class ClinicHistoryEntity extends PersistentEntity {
   @Prop({ type: MSchema.Types.ObjectId, ref: () => PatientsEntity}) patient: string;
   @Prop({type:String}) externalCause: ExternalCause;
   @Prop({type:String}) purposeType: PurposeType;
+  @Prop({type:String}) clinicHistoryType: ClinicHistoryType;
   @Prop() otherHistory: string;
   @Prop() familyHistory: string;
   @Prop() pharmacologicalHistory: string;
   @Prop() allergicHistory: string;
-  @Prop() surgicalHistory: string;
+  @Prop() surgicalHistory: string; 
   @Prop() medicalHistory: string;
   @Prop() reasonForConsultation: string;
   @Prop() currentIllness: string;
@@ -56,8 +67,6 @@ export class ClinicHistoryEntity extends PersistentEntity {
   @Prop() observations?: string;
   @Prop() sendDirectionsToWhatsapp: boolean;
   @Prop() sendDirectionsTheMail: boolean;
-  @Prop({ type: [{ type: MSchema.Types.ObjectId }] }) diagnosis?: Array<string>;
-  @Prop({ type: [{ type: MSchema.Types.ObjectId }] }) indications?: Array<string>;
 }
 
 export const ClinicHistorySchema = SchemaFactory.createForClass(ClinicHistoryEntity);

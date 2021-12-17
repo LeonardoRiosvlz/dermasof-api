@@ -1,0 +1,5 @@
+{
+  "PhotographicReportWithIdDoesNotExist": "PhotographicReport with id: '%id%' does not exists",
+  "PhotographicReportNameUsed": "PhotographicReport with name: '%name%' already exists",
+  "PhotographicReportFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

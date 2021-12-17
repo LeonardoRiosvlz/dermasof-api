@@ -1,11 +1,12 @@
 import { Field, InputType, ID } from '@nestjs/graphql';
-import { ExternalCause, PurposeType } from 'src/modules/clinic-history/entities/clinic-history.entity';
+import { ClinicHistoryType, ExternalCause, PurposeType } from 'src/modules/clinic-history/entities/clinic-history.entity';
 
 @InputType()
 export class CreateClinicHistoryInput {
   @Field(() => ID, {nullable: true}) patient: string;
   @Field(() => ExternalCause, )  externalCause: ExternalCause;
   @Field(() => PurposeType, )  purposeType: PurposeType;
+  @Field(() => ClinicHistoryType, )  clinicHistoryType: ClinicHistoryType;
   @Field(() => String, )  otherHistory: string;
   @Field(() => String, )  reasonForConsultation: string;
   @Field(() => String, )  familyHistory: string;
@@ -20,6 +21,4 @@ export class CreateClinicHistoryInput {
   @Field(() => String, {nullable: true} )  observations?: string;
   @Field(() => Boolean )  sendDirectionsToWhatsapp: boolean;
   @Field(() => Boolean )  sendDirectionsTheMail: boolean;
-  @Field(() => [ID], {nullable: true}) diagnosis?: Array<string>;
-  @Field(() => [ID], {nullable: true}) indications?: Array<string>;
 }

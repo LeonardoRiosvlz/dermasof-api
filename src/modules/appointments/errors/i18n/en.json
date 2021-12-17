@@ -1,0 +1,5 @@
+{
+  "AppointmentsWithIdDoesNotExist": "Appointments with id: '%id%' does not exists",
+  "AppointmentsNameUsed": "Appointments with name: '%name%' already exists",
+  "AppointmentsFieldUsed": "The value: %value% exists in the database, for the field: %field%"
+}

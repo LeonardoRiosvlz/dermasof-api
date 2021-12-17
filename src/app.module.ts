@@ -30,6 +30,11 @@ import { PatientsModule } from './modules/patients/patients.module';
 import { ConsultationTypeModule } from './modules/consultation-type/consultation-type.module';
 import { VitalSignsModule } from './modules/vital-signs/vital-signs.module';
 import { ClinicHistoryModule } from './modules/clinic-history/clinic-history.module';
+import { PhotographicReportModule } from './modules/photographic-report/photographic-report.module';
+import { RegionModule } from './modules/region/region.module';
+import { AppointmentsModule } from './modules/appointments/appointments.module';
+
+
 
 @Module({
   imports: [
@@ -63,7 +68,11 @@ import { ClinicHistoryModule } from './modules/clinic-history/clinic-history.mod
     PatientsModule,
     ConsultationTypeModule,
     VitalSignsModule,
+    PhotographicReportModule,
     ClinicHistoryModule,
+    RegionModule,
+    AppointmentsModule,
+
   ],
 
   controllers: [],

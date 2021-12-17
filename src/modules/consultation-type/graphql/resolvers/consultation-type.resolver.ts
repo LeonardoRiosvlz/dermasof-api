@@ -37,6 +37,8 @@ import { IPaginatedData } from 'src/shared/core/interfaces/IPaginatedData';
 import { SolvedEntityResponse } from 'src/shared/modules/graphql/dto/responses/solved-entity.response';
 import { ServiceEntity } from 'src/modules/service/entities/service.entity';
 import { GetOneServiceQuery } from 'src/modules/service/cqrs/queries/impl/get-one-service.query';
+import { UserEntity } from 'src/shared/modules/user/entities/user.entity';
+import { GetAllUsersQuery } from 'src/shared/modules/user/cqrs/queries/impl/get-all-users.query';
 
 @Resolver(() => ConsultationTypeResponse)
 export class ConsultationTypeResolver extends BaseResolver {
@@ -158,6 +160,25 @@ export class ConsultationTypeResolver extends BaseResolver {
     }
   }
 
+  @ResolveField(() => [SolvedEntityResponse], { nullable: true })
+  async doctors(@Parent() parent?: ConsultationTypeResponse): Promise<Array<SolvedEntityResponse>> {
+    if (parent?.doctors) {
+      const barCodeOrErr = await this._cqrsBus.execQuery<Result<Array<UserEntity>>>(new GetAllUsersQuery({where:{
+          id: {in: parent.doctors.map(x=>x.id)}
+        }}));
+      if (barCodeOrErr.isFailure) {
+        return [];
+      }
+      const doctors: Array<UserEntity> = barCodeOrErr.unwrap();
+      return doctors.map((x)=>{
+        return {
+          id: x.id,
+          entityName: UserEntity.name,
+          identifier: x.email
+        }
+      })
+    }
+  }
 
 
 }

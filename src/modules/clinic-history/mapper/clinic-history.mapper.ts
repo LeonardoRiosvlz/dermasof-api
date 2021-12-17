@@ -28,16 +28,6 @@ export class ClinicHistoryMapper implements BaseMapper<ClinicHistoryEntity> {
     return {
       ...persistentEntity,
       patient: persistentEntity?.patient ? { id: persistentEntity.patient } : undefined,
-      diagnosis: persistentEntity.diagnosis.map((x)=>{
-        return{
-          id: x
-        }
-      }),
-      indications: persistentEntity.indications.map((x)=>{
-        return{
-          id: x
-        }
-      }),
     };
   }
 

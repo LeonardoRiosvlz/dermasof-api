@@ -173,7 +173,7 @@ export class VitalSignsResolver extends BaseResolver {
   
   @ResolveField(() => [SolvedEntityResponse], { nullable: true })
   async consultationType(@Parent() parent?: VitalSignsResponse): Promise<SolvedEntityResponse> {
-    if (parent?.patient) {
+    if (parent?.consultationType) {
       const consultationTypeOrErr = await this._cqrsBus.execQuery<Result<ConsultationTypeEntity>>(new GetOneConsultationTypeQuery({where:{
              id: {eq: parent.consultationType.id}
         }}));

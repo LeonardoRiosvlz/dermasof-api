@@ -11,6 +11,7 @@ export class ConsultationTypeEntity extends PersistentEntity {
   @Prop() duration: number;
   @Prop() description?: string;
   @Prop({ type: MSchema.Types.ObjectId, ref: () => ServiceEntity}) service: string;
+  @Prop({ type: [{ type: MSchema.Types.ObjectId }] }) doctors?: Array<string>;
 }
 
 export const ConsultationTypeSchema = SchemaFactory.createForClass(ConsultationTypeEntity);
